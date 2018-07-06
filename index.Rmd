@@ -2,7 +2,9 @@
 title: "Election Data Explorer"
 author: "Michael Baldassaro"
 date: "7/6/2018"
-output: ioslides_presentation
+output:
+  html_document:
+    df_print: paged
 runtime: shiny
 ---
 ##About the App
@@ -33,11 +35,12 @@ inputPanel(
 ##About The Data
 The county level data used to generate the maps comes from the following sources:
 
-* [2016 Presidential Election Results Data](https://github.com/mbaldassaro/County_Level_Election_Results_12-16/blob/master/2016_US_County_Level_Presidential_Results.csv)
-* [2016 Unemployment Data](https://www.bls.gov/lau/#tables)
-* [2016 Ethnicity / Demographic Data](https://www.census.gov/data/datasets/2016/demo/popest/counties-detail.html)
-* [2016 Educational Attainment / Urban-Rural Data](https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/)
-* [2016 Poverty / Household Income](https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/)
-* [2013 Housing / Age Data](https://www.kaggle.com/joelwilson/2012-2016-presidential-elections/version/2#county_facts.csv)
-* [County Map](https://www.census.gov/cgi-bin/geo/shapefiles2010/layers.cgi)
+- [2016 Presidential Election Results Data](https://github.com/mbaldassaro/County_Level_Election_Results_12-16/blob/master/2016_US_County_Level_Presidential_Results.csv)
+- [2016 Unemployment Data](https://www.bls.gov/lau/#tables)
+- [2016 Ethnicity / Demographic Data](https://www.census.gov/data/datasets/2016/demo/popest/counties-detail.html)
+- [2016 Educational Attainment / Urban-Rural Data](https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/)
+- [2016 Poverty / Household Income](https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/)
+- [2013 Housing / Age Data](https://www.kaggle.com/joelwilson/2012-2016-presidential-elections/version/2#county_facts.csv)
+- [County Map](https://www.census.gov/cgi-bin/geo/shapefiles2010/layers.cgi)
+
 

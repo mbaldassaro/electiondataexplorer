@@ -1,0 +1,12 @@
+name: electiondataexplorer2
+title: Electiondataexplorer2
+username:
+account: mbaldassaro
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 375475
+bundleId: 1468749
+url: https://mbaldassaro.shinyapps.io/electiondataexplorer2/
+when: 1530897801.20539
+asMultiple: FALSE
+asStatic: FALSE

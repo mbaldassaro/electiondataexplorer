@@ -1,0 +1,43 @@
+---
+title: "Election Data Explorer"
+author: "Michael Baldassaro"
+date: "7/6/2018"
+output: ioslides_presentation
+runtime: shiny
+---
+##About the App
+The [2016 election data explorer](https://mbaldassaro.shinyapps.io/electiondataexplorer/) is an initiative to analyze and visualize US electoral, demographic and socio-economic data.  
+
+The goal of the election data explorer is to present conextual data in a highly accessible way to provide a meaningful lens through which to understand the outcome of the 2016 US Presidential Elections  
+
+##Interface - Dropdown
+You can "Choose a variable to display" from the drop down menu and it will automatically generate a map based on the variable you select. 
+
+```{r example, echo=FALSE, eval=TRUE}
+inputPanel(
+  selectInput("n_breaks", label = "Choose a variable to display",
+              choices = c("Trump", "Clinton", "White", "Black", "HS Diploma", "College Degree"), selected = "Trump"))
+
+```
+
+##Interface - Slider
+Once you have selected a variable, you can "Select a Range" to adjust the range of percentages to be displayed on the map.
+
+```{r example2, echo=FALSE, eval=TRUE}
+inputPanel(
+  sliderInput("range", label = "Select a Range",
+              min = 0, max = 100, value = c(0,100))
+)
+```
+
+##About The Data
+The county level data used to generate the maps comes from the following sources:
+
+* [2016 Presidential Election Results Data](https://github.com/mbaldassaro/County_Level_Election_Results_12-16/blob/master/2016_US_County_Level_Presidential_Results.csv)
+* [2016 Unemployment Data](https://www.bls.gov/lau/#tables)
+* [2016 Ethnicity / Demographic Data](https://www.census.gov/data/datasets/2016/demo/popest/counties-detail.html)
+* [2016 Educational Attainment / Urban-Rural Data](https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/)
+* [2016 Poverty / Household Income](https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/)
+* [2013 Housing / Age Data](https://www.kaggle.com/joelwilson/2012-2016-presidential-elections/version/2#county_facts.csv)
+* [County Map](https://www.census.gov/cgi-bin/geo/shapefiles2010/layers.cgi)
+
